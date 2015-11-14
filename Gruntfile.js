@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          keepalive: true,
+          //keepalive: true,
           port: 9000,
           livereload: 35729,
           hostname: 'localhost',
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
           livereload: '<%= connect.server.options.livereload %>'
         },
         files: [
-          'generatedStyles/main.css','index.html'  
+          'generatedStyles/main.css','index.html'
         ]
       }
     }
@@ -62,7 +62,8 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('run', [
-    'connect:server'
+    'connect:server',
+    'watch'
   ]);
 
   grunt.registerTask('default', [
