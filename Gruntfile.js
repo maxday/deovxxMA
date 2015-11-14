@@ -10,8 +10,16 @@ module.exports = function(grunt) {
         options: {
           keepalive: true,
           port: 9000,
-          hostname: 'localhost'
-        }
+          hostname: 'localhost',
+          middleware: function(connect, options, middlewares) {
+            middlewares.unshift(function(req, res, next) {
+              res.setHeader('X-MyCustomHeader', "gruntPower");
+              next();
+            });
+            return middlewares;
+          }
+        },
+
       }
     }
   });
