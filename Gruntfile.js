@@ -3,8 +3,8 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
     connect: {
@@ -24,12 +24,7 @@ module.exports = function(grunt) {
 
       }
     },
-    concat: {
-      math: {
-        src: ['js/math.add.js', 'js/math.mult.js', 'js/math.calc.js'],
-        dest: 'generated/all.js',
-      },
-    },
+
 
     compass: {
       server: {
@@ -41,6 +36,13 @@ module.exports = function(grunt) {
       }
     },
 
+
+    watch: {
+      compass: {
+        files: ['styles/main.scss'],
+        tasks: ['compass:server']
+      }
+    }
   });
 
 
@@ -52,7 +54,6 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('run', [
-    'concat:math',
     'connect:server'
   ]);
 
