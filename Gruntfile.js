@@ -12,6 +12,7 @@ module.exports = function(grunt) {
         options: {
           keepalive: true,
           port: 9000,
+          livereload: 35729,
           hostname: 'localhost',
           middleware: function(connect, options, middlewares) {
             middlewares.unshift(function(req, res, next) {
@@ -20,8 +21,7 @@ module.exports = function(grunt) {
             });
             return middlewares;
           }
-        },
-
+        }
       }
     },
 
@@ -41,6 +41,14 @@ module.exports = function(grunt) {
       compass: {
         files: ['styles/main.scss'],
         tasks: ['compass:server']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.server.options.livereload %>'
+        },
+        files: [
+          'generatedStyles/main.css','index.html'  
+        ]
       }
     }
   });
