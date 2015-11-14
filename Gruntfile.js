@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   grunt.initConfig({
     connect: {
@@ -28,8 +29,27 @@ module.exports = function(grunt) {
         src: ['js/math.add.js', 'js/math.mult.js', 'js/math.calc.js'],
         dest: 'generated/all.js',
       },
-    }
+    },
+
+    compass: {
+      server: {
+        options: {
+          sourcemap: true,
+          sassDir: 'styles',
+          cssDir: 'generatedStyles'
+        }
+      }
+    },
+
   });
+
+
+
+
+
+
+
+
 
   grunt.registerTask('run', [
     'concat:math',

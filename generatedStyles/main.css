@@ -1,0 +1,28 @@
+/* line 5, ../styles/main.scss */
+body {
+  padding: 0;
+}
+
+/* line 9, ../styles/main.scss */
+.hello {
+  text-align: center;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+/* line 14, ../styles/main.scss */
+.hello h1 {
+  background-color: #EEEEEE;
+}
+/* line 18, ../styles/main.scss */
+.hello .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* line 25, ../styles/main.scss */
+.footer {
+  padding-top: 10px;
+  color: #777;
+}
+
+/*# sourceMappingURL=main.css.map */

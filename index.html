@@ -4,18 +4,117 @@
 <head>
   <meta charset="utf-8">
   <title>My awesome app</title>
+  <link rel="stylesheet" href="generatedStyles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 </head>
 
 <body>
-  <h1>Hi DevoxxMA !</h1>
 
-<input type="text" id="sumA" value="3" />  - <input type="text" id="sumB" value="3" /> - <input type="text" id="resultSum" />
-<input type="button" id="btnSum" value="Sum !"/>
+
+
+  <div class="header">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#/">devoxxma</a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#/">Home</a></li>
+            <li><a ng-href="#/">Page 1</a></li>
+            <li><a ng-href="#/">Page 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron hello">
+        <div class="container">
+          <h1>Hi, DevoxxMA!</h1>
+          <p>Grunt power !</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Action 1</a>
+          <a class="btn btn-warning btn-lg" href="#" role="button">Action 2</a>
+          <a class="btn btn-success btn-lg" href="#" role="button">Action 3</a></p>
+        </div>
+      </div>
+  <div class="container">
+
+
+    <form>
+      <div class="form-group">
+        <h1>Sum</h1>
+        <label for="exampleInputEmail1">First number</label>
+        <input type="text" class="form-control" id="sumA" value="" placeholder="Enter the first number">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Second number</label>
+        <input type="text" class="form-control" id="sumB" placeholder="Enter the second number">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Result</label>
+        <input type="text" class="form-control" id="resultSum" />
+      </div>
+      <button type="button" id="btnSum" class="btn btn-primary">Sum these numbers</button>
+    </form>
+    <hr />
+    <form>
+      <div class="form-group">
+        <h1>Mult</h1>
+        <label for="exampleInputEmail1">First number</label>
+        <input type="text" class="form-control" id="multA" placeholder="Enter the first number">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Second number</label>
+        <input type="text" class="form-control" id="multB" placeholder="Enter the second number">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Result</label>
+        <input type="text" class="form-control" id="resultMult" />
+      </div>
+      <button type="button" id="btnMult" class="btn btn-primary">Multiply these numbers</button>
+    </form>
+
+
+
+
+
+  </div>
 <hr />
-<input type="text" id="multA" value="3" />  - <input type="text" id="multB" value="3" /> - <input type="text" id="resultMult" />
-<input type="button" id="btnMult" value="Mult !"/>
+  <div class="footer">
+    <div class="container">
+      <p>Maxime DAVID @xouuox</p>
+    </div>
+  </div>
 
-  <script src="generated/all.js"></script>
+
+
+
+
+
+
+  <script src="js/math.add.js"></script>
+  <script src="js/math.mult.js"></script>
+  <script src="js/math.calc.js"></script>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
