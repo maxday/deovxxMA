@@ -1,14 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  var resultSum = document.getElementById("resultSum");
-  var resultMult = document.getElementById("resultMult");
+  var resultSum = document.getElementById('resultSum');
+  var resultMult = document.getElementById('resultMult');
 
-  document.getElementById("btnSum").addEventListener("click", function(){
-    add(document.getElementById("sumA").value, document.getElementById("sumB").value, resultSum);
-  });
+  if (typeof document.getElementById('btnSum') != 'undefined') {
+    document.getElementById("btnSum").addEventListener("click", function() {
+      resultSum.value = add(document.getElementById("sumA").value, document.getElementById("sumB").value);
+    });
+  }
 
-  document.getElementById("btnMult").addEventListener("click", function(){
-    mult(document.getElementById("multA").value, document.getElementById("multB").value, resultMult);
-  });
+  if (typeof document.getElementById('btnDiv') != 'undefined') {
+    document.getElementById("btnDiv").addEventListener("click", function() {
+      resultDiv.value = div(document.getElementById("divA").value, document.getElementById("divB").value);
+    });
+  }
 
 });

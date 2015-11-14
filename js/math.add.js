@@ -1,3 +1,3 @@
-function add(a, b, result) {
-  result.value = parseInt(a, 10) + parseInt(b, 10);
+function add(a, b) {
+  return parseInt(a, 10) + parseInt(b, 10);
 }

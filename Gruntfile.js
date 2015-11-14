@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-karma');
 
   grunt.initConfig({
     connect: {
@@ -22,7 +23,12 @@ module.exports = function(grunt) {
             return middlewares;
           }
         }
-      }
+      },
+      test: {
+        options: {
+          port: 9001,
+        }
+      },
     },
 
 
@@ -50,14 +56,27 @@ module.exports = function(grunt) {
           'generatedStyles/main.css','index.html'
         ]
       }
+    },
+
+
+    karma: {
+      unit: {
+        configFile: 'test/karma.conf.js',
+        singleRun: true
+      }
     }
+
+
   });
 
 
 
 
 
-
+  grunt.registerTask('test', [
+    'connect:test',
+    'karma'
+  ]);
 
 
 
