@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.initConfig({
     connect: {
@@ -21,10 +22,17 @@ module.exports = function(grunt) {
         },
 
       }
+    },
+    concat: {
+      math: {
+        src: ['js/math.add.js', 'js/math.mult.js', 'js/math.calc.js'],
+        dest: 'generated/all.js',
+      },
     }
   });
 
   grunt.registerTask('run', [
+    'concat:math',
     'connect:server'
   ]);
 
