@@ -4,7 +4,7 @@ describe('Maths function: add : ', function () {
 
   //should fails
   it("adds 100 and 5 as numbers", function() {
-    expect(add(100,5)).toEqual(100000);
+    expect(add(100,5)).toEqual(105);
   });
 
   it("adds 100 and 5 as strings", function() {

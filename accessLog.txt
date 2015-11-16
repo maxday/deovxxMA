@@ -1,0 +1,10 @@
+/
+/styles/header.css
+/styles/footer.css
+/styles/bootstrap.css
+/images/pic1.jpg
+/js/math.add.js
+/js/math.div.js
+/js/math.calc.js
+/images/pic2.jpg
+/images/pic3.jpg

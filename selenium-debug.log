@@ -1,73 +1,73 @@
-14:06:38.385 INFO - Launching a standalone server
+23:23:07.883 INFO - Launching a standalone server
 Setting system property webdriver.chrome.driver to test-e2e/chromedriver
-14:06:38.418 INFO - Java: Oracle Corporation 24.51-b03
-14:06:38.418 INFO - OS: Mac OS X 10.11.1 x86_64
-14:06:38.427 INFO - v2.44.0, with Core v2.44.0. Built from revision 76d78cf
-14:06:38.495 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: MAC
-14:06:38.524 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-14:06:38.524 INFO - Version Jetty/5.1.x
-14:06:38.525 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
-14:06:38.526 INFO - Started HttpContext[/selenium-server,/selenium-server]
-14:06:38.526 INFO - Started HttpContext[/,/]
-14:06:38.551 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@a5dae4f
-14:06:38.551 INFO - Started HttpContext[/wd,/wd]
-14:06:38.554 INFO - Started SocketListener on 0.0.0.0:4444
-14:06:38.554 INFO - Started org.openqa.jetty.jetty.Server@3d73f82f
-14:06:38.798 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Add}]])
-14:06:38.806 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Add}]
-Starting ChromeDriver 2.20.353124 (035346203162d32c80f1dce587c8154a1efa0c3b) on port 24920
+23:23:07.927 INFO - Java: Oracle Corporation 24.79-b02
+23:23:07.927 INFO - OS: Mac OS X 10.10.4 x86_64
+23:23:07.940 INFO - v2.44.0, with Core v2.44.0. Built from revision 76d78cf
+23:23:08.038 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: MAC
+23:23:08.083 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+23:23:08.085 INFO - Version Jetty/5.1.x
+23:23:08.085 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+23:23:08.086 INFO - Started HttpContext[/selenium-server,/selenium-server]
+23:23:08.086 INFO - Started HttpContext[/,/]
+23:23:08.107 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@623e2b64
+23:23:08.107 INFO - Started HttpContext[/wd,/wd]
+23:23:08.114 INFO - Started SocketListener on 0.0.0.0:4444
+23:23:08.114 INFO - Started org.openqa.jetty.jetty.Server@5f1483a0
+23:23:08.463 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Add}]])
+23:23:08.474 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Add}]
+Starting ChromeDriver 2.20.353124 (035346203162d32c80f1dce587c8154a1efa0c3b) on port 18727
 Only local connections are allowed.
-14:06:40.590 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Add}]]
-14:06:40.603 INFO - Executing: [get: http://localhost:9000])
-14:06:41.215 INFO - Done: [get: http://localhost:9000]
-14:06:41.223 INFO - Executing: [find elements: By.selector: body])
-14:06:41.260 INFO - Done: [find elements: By.selector: body]
-14:06:41.264 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: body]])
-14:06:41.277 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: body]]
-14:06:41.283 INFO - Executing: [find element: By.selector: input[id=sumA]])
-14:06:41.298 INFO - Done: [find element: By.selector: input[id=sumA]]
-14:06:41.302 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: input[id=sumA]], [1, 0]])
-14:06:41.360 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: input[id=sumA]], [1, 0]]
-14:06:41.364 INFO - Executing: [find element: By.selector: input[id=sumB]])
-14:06:41.381 INFO - Done: [find element: By.selector: input[id=sumB]]
-14:06:41.385 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: input[id=sumB]], [1, 0]])
-14:06:41.418 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: input[id=sumB]], [1, 0]]
-14:06:41.422 INFO - Executing: [find element: By.selector: button[id=btnSum]])
-14:06:41.437 INFO - Done: [find element: By.selector: button[id=btnSum]]
-14:06:41.441 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: button[id=btnSum]]])
-14:06:41.472 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: button[id=btnSum]]]
-14:07:02.481 INFO - Executing: [find element: By.selector: #resultSum])
-14:07:02.496 INFO - Done: [find element: By.selector: #resultSum]
-14:07:02.500 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: #resultSum], value])
-14:07:02.510 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (e94b91fe8d0f78d65c779e807312be86)] -> css selector: #resultSum], value]
-14:07:02.514 INFO - Executing: [delete session: 7c939752-5de7-4f79-a911-b690086fc84e])
-14:07:03.164 INFO - Done: [delete session: 7c939752-5de7-4f79-a911-b690086fc84e]
-14:07:03.289 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Div}]])
-14:07:03.290 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Div}]
-Starting ChromeDriver 2.20.353124 (035346203162d32c80f1dce587c8154a1efa0c3b) on port 30943
+23:23:10.618 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Add}]]
+23:23:10.645 INFO - Executing: [get: http://localhost:9001])
+23:23:11.442 INFO - Done: [get: http://localhost:9001]
+23:23:11.456 INFO - Executing: [find elements: By.selector: body])
+23:23:11.509 INFO - Done: [find elements: By.selector: body]
+23:23:11.514 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: body]])
+23:23:11.532 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: body]]
+23:23:11.538 INFO - Executing: [find element: By.selector: input[id=sumA]])
+23:23:11.560 INFO - Done: [find element: By.selector: input[id=sumA]]
+23:23:11.565 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: input[id=sumA]], [1, 0]])
+23:23:11.646 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: input[id=sumA]], [1, 0]]
+23:23:11.653 INFO - Executing: [find element: By.selector: input[id=sumB]])
+23:23:11.678 INFO - Done: [find element: By.selector: input[id=sumB]]
+23:23:11.685 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: input[id=sumB]], [1, 0]])
+23:23:11.738 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: input[id=sumB]], [1, 0]]
+23:23:11.744 INFO - Executing: [find element: By.selector: button[id=btnSum]])
+23:23:11.771 INFO - Done: [find element: By.selector: button[id=btnSum]]
+23:23:11.779 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: button[id=btnSum]]])
+23:23:11.838 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: button[id=btnSum]]]
+23:23:32.855 INFO - Executing: [find element: By.selector: #resultSum])
+23:23:32.886 INFO - Done: [find element: By.selector: #resultSum]
+23:23:32.893 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: #resultSum], value])
+23:23:32.909 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (08c287749365732ab90e148bbe451368)] -> css selector: #resultSum], value]
+23:23:32.921 INFO - Executing: [delete session: 34a0934d-7b5d-4896-8ab2-49921b808b64])
+23:23:33.497 INFO - Done: [delete session: 34a0934d-7b5d-4896-8ab2-49921b808b64]
+23:23:33.630 INFO - Executing: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Div}]])
+23:23:33.631 INFO - Creating a new session for Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Div}]
+Starting ChromeDriver 2.20.353124 (035346203162d32c80f1dce587c8154a1efa0c3b) on port 38674
 Only local connections are allowed.
-14:07:04.963 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Div}]]
-14:07:04.968 INFO - Executing: [get: http://localhost:9000])
-14:07:05.541 INFO - Done: [get: http://localhost:9000]
-14:07:05.547 INFO - Executing: [find elements: By.selector: body])
-14:07:05.570 INFO - Done: [find elements: By.selector: body]
-14:07:05.578 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: body]])
-14:07:05.591 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: body]]
-14:07:05.596 INFO - Executing: [find element: By.selector: input[id=divA]])
-14:07:05.611 INFO - Done: [find element: By.selector: input[id=divA]]
-14:07:05.615 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: input[id=divA]], [1, 0, 0]])
-14:07:05.671 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: input[id=divA]], [1, 0, 0]]
-14:07:05.676 INFO - Executing: [find element: By.selector: input[id=divB]])
-14:07:05.695 INFO - Done: [find element: By.selector: input[id=divB]]
-14:07:05.700 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: input[id=divB]], [5]])
-14:07:05.737 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: input[id=divB]], [5]]
-14:07:05.741 INFO - Executing: [find element: By.selector: button[id=btnDiv]])
-14:07:05.756 INFO - Done: [find element: By.selector: button[id=btnDiv]]
-14:07:05.761 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: button[id=btnDiv]]])
-14:07:05.794 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: button[id=btnDiv]]]
-14:07:26.802 INFO - Executing: [find element: By.selector: #resultDiv])
-14:07:26.817 INFO - Done: [find element: By.selector: #resultDiv]
-14:07:26.821 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: #resultDiv], value])
-14:07:26.830 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (256d07bef51e1c1fdb2069abf50d4331)] -> css selector: #resultDiv], value]
-14:07:26.835 INFO - Executing: [delete session: 03bcf95e-448e-4895-bccb-23883da05863])
-14:07:27.398 INFO - Done: [delete session: 03bcf95e-448e-4895-bccb-23883da05863]
+23:23:35.272 INFO - Done: [new session: Capabilities [{platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=Div}]]
+23:23:35.280 INFO - Executing: [get: http://localhost:9001])
+23:23:35.763 INFO - Done: [get: http://localhost:9001]
+23:23:35.772 INFO - Executing: [find elements: By.selector: body])
+23:23:35.809 INFO - Done: [find elements: By.selector: body]
+23:23:35.817 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: body]])
+23:23:35.840 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: body]]
+23:23:35.845 INFO - Executing: [find element: By.selector: input[id=divA]])
+23:23:35.867 INFO - Done: [find element: By.selector: input[id=divA]]
+23:23:35.871 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: input[id=divA]], [1, 0, 0]])
+23:23:35.954 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: input[id=divA]], [1, 0, 0]]
+23:23:35.963 INFO - Executing: [find element: By.selector: input[id=divB]])
+23:23:35.988 INFO - Done: [find element: By.selector: input[id=divB]]
+23:23:35.994 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: input[id=divB]], [5]])
+23:23:36.047 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: input[id=divB]], [5]]
+23:23:36.055 INFO - Executing: [find element: By.selector: button[id=btnDiv]])
+23:23:36.081 INFO - Done: [find element: By.selector: button[id=btnDiv]]
+23:23:36.086 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: button[id=btnDiv]]])
+23:23:36.139 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: button[id=btnDiv]]]
+23:23:57.149 INFO - Executing: [find element: By.selector: #resultDiv])
+23:23:57.170 INFO - Done: [find element: By.selector: #resultDiv]
+23:23:57.174 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: #resultDiv], value])
+23:23:57.187 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (6d0d65e3a1c9ad400320f2aa7c3e52fa)] -> css selector: #resultDiv], value]
+23:23:57.192 INFO - Executing: [delete session: 6ea6c963-6813-4b7e-92b2-ec9b77e1f6a3])
+23:23:57.764 INFO - Done: [delete session: 6ea6c963-6813-4b7e-92b2-ec9b77e1f6a3]

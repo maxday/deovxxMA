@@ -1,10 +1,7 @@
 $hello-border-color: #000000;
-$hello-title-backouground-color: #FFFFFF;
+$hello-title-backouground-color: #EEEEEE;
 $button-font-size : 20px;
-
-body {
-  padding: 0;
-}
+$button-padding : 14px 24px;
 
 .hello {
   text-align: center;
@@ -17,12 +14,7 @@ body {
 
   .btn {
     font-size: $button-font-size;
-    padding: 14px 24px;
+    padding: $button-padding;
 
   }
-}
-
-.footer {
-  padding-top: 10px;
-  color: #777;
 }

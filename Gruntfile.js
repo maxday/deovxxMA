@@ -7,6 +7,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-nightwatch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+
+
+  grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+
+  var myCustomHeader = grunt.option('myCustomHeader') || 'gruntPower';
+  var shouldLog = grunt.option('shouldLog') || false;
 
   grunt.initConfig({
     connect: {
@@ -18,7 +32,12 @@ module.exports = function(grunt) {
           hostname: 'localhost',
           middleware: function(connect, options, middlewares) {
             middlewares.unshift(function(req, res, next) {
-              res.setHeader('X-MyCustomHeader', "gruntPower");
+              if(shouldLog) {
+                grunt.log.writeln("request = " + req.url);
+                var txt = grunt.file.read("accessLog.txt")
+                grunt.file.write("accessLog.txt", txt + req.url + "\n");
+              }
+              res.setHeader('X-MyCustomHeader', myCustomHeader);
               next();
             });
             return middlewares;
@@ -30,6 +49,11 @@ module.exports = function(grunt) {
           port: 9001,
         }
       },
+      dist: {
+        options: {
+          base: 'dist'
+        }
+      }
     },
 
 
@@ -38,7 +62,7 @@ module.exports = function(grunt) {
         options: {
           sourcemap: true,
           sassDir: 'styles',
-          cssDir: 'generatedStyles'
+          cssDir: 'styles'
         }
       }
     },
@@ -46,7 +70,7 @@ module.exports = function(grunt) {
 
     watch: {
       compass: {
-        files: ['styles/main.scss'],
+        files: ['styles/header.scss', 'styles/footer.scss'],
         tasks: ['compass:server']
       },
       livereload: {
@@ -54,7 +78,7 @@ module.exports = function(grunt) {
           livereload: '<%= connect.server.options.livereload %>'
         },
         files: [
-          'generatedStyles/main.css', 'index.html'
+          'header.css', 'footer.css', 'index.html'
         ]
       }
     },
@@ -91,18 +115,101 @@ module.exports = function(grunt) {
           }
         }
       }
-    }
+    },
+
+    imagemin: { // Task
+      static: { // Target
+        options: { // Target options
+          optimizationLevel: 1,
+
+          //use: [mozjpeg()]
+        },
+        files: { // Dictionary of files
+          'generatedImages/pic1.jpg': 'images/pic1.jpg', // 'destination': 'source'
+          'generatedImages/pic2.jpg': 'images/pic2.jpg',
+          'generatedImages/pic3.jpg': 'images/pic3.jpg'
+        }
+      }
+    },
+
+
+
+
+    useminPrepare: {
+      html: 'index.html',
+      options: {
+        dest: 'dist',
+        flow : {
+          html : {
+            steps : {
+              js : ['concat', 'uglify'],
+              css : ['cssmin']
+            }
+          }
+        }
+      }
+    },
+    usemin: {
+      html: ['dist/index.html'],
+      css: ['styles/*.css'],
+      js: ['js/*.js']
+    },
+    copy: {
+      html: {
+        src: 'index.html',
+        dest: 'dist/index.html'
+      },
+      images: {
+        cwd : 'generatedImages/',
+        src: '*.jpg',
+        dest: 'dist/images/',
+        expand : true
+      }
+    },
+
+    jshint: {
+      files: ['js/*.js'],
+      options: {
+        curly: true,
+        eqeqeq : true
+      }
+    },
 
 
   });
 
 
 
+  grunt.registerTask('serve', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
 
+    grunt.task.run([
+      'run'
+    ]);
+  });
+
+  grunt.registerTask('build', [
+    'copy:html',
+    'copy:images',
+    'useminPrepare',
+    'concat',
+    'uglify',
+    'cssmin',
+    'imagemin',
+    'usemin',
+    'jshint'
+  ])
 
   grunt.registerTask('test', [
     'connect:test',
     'karma'
+  ]);
+
+  grunt.registerTask('e2e', [
+    'connect:test',
+    'nightwatch'
   ]);
 
 
